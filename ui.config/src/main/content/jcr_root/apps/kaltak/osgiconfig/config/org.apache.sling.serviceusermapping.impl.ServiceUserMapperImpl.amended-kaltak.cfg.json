@@ -1,0 +1,6 @@
+{
+  "user.mapping": [
+    "kaltak.core:content-reader=kaltak-content-reader",
+    "kaltak.core:content-writer=kaltak-content-writer"
+  ]
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/kaltak" mode="merge"/>
+    <filter root="/content/kaltak" mode="merge"/>
+    <filter root="/content/dam/kaltak" mode="merge">
+        <exclude pattern="/content/dam/kaltak(/.*)?"/>
+        <include pattern="/content/dam/kaltak/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/kaltak/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/kaltak" mode="merge"/>
+</workspaceFilter>

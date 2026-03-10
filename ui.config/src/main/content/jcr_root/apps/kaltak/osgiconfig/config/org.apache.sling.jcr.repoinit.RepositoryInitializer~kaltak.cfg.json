@@ -1,0 +1,20 @@
+{
+    "scripts": [
+
+        "create path (cq:Page) /content/kaltak",
+        "create path (cq:PageContent) /content/kaltak/jcr:content",
+        "create path (cq:Page) /content/kaltak/en",
+        "create path (cq:PageContent) /content/kaltak/en/jcr:content",
+        "create path (cq:Page) /content/kaltak/en/news",
+        "create path (cq:PageContent) /content/kaltak/en/news/jcr:content",
+        "create path (sling:OrderedFolder) /content/kaltak/en/archive",
+        "create path (sling:Folder) /content/dam/kaltak",
+        "create path (nt:unstructured) /content/dam/kaltak/jcr:content",
+        "set properties on /content/dam/kaltak/jcr:content\n  set cq:conf{String} to /conf/kaltak\n  set jcr:title{String} to \"News Hub Assets\"\nend",
+        "create service user kaltak-content-reader",
+        "create service user kaltak-content-writer",
+        "set ACL for kaltak-content-reader\n  allow jcr:read on /content/kaltak/en/news\nend",
+        "set ACL for kaltak-content-writer\n  allow jcr:read on /content/kaltak/en\n  allow jcr:write on /content/kaltak/en\nend"
+
+    ]
+}
